@@ -5,11 +5,11 @@ module Endure;
 role Resource {
 }
 
-role property {
+role Property {
 }
 
-multi trait_mod:<is>(AttributeDeclarand $a, Endure::property, $type, %args = {}) {
-    $a.container.VAR does Endure::property;
+multi sub trait_mod:<does>(AttributeDeclarand $a, Endure::Property, $type) is export {
+   #$a.container.VAR does Endure::property;
 
     #say 'type is: ', $type.WHAT;
     #say 'args: ', %args;
@@ -20,7 +20,7 @@ multi trait_mod:<is>(AttributeDeclarand $a, Endure::property, $type, %args = {})
     #say $_.name for $a.^attributes;
 
     $a.container.VAR.type = $type;
-    $a.container.VAR.args = %args;
+    # $a.container.VAR.args = %args;
 }
 
 # vim: ft=perl6

@@ -1,5 +1,7 @@
 =head1 Endure
 
+The project is currently on hold until I can work out a few perl 6 issues, some features that aren't implemented in rakudo are preventing me from doing this the way I'd like to do this. 
+
 Endure, one day, will be a role based data persistance.
 
 The overall goal is to create a way to have persistant data in a class object that does not involve inheriting from a database row, as not to interfere with the class hierarchy.
